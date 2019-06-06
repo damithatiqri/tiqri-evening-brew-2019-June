@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var port = process.env.port || 5000;
+var port = process.env.port;
 
 var bodyParser = require('body-parser');
 // create application/x-www-form-urlencoded parser
