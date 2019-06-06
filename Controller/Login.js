@@ -56,6 +56,11 @@ const users = [
 var routes = function()
 {
     router.route('/')
+    .get(function(req, res){
+        res.status(200).send("api is up");
+    });
+    
+    router.route('/')
     .post(function(req, res){
         if (!req.headers.authorization || req.headers.authorization.indexOf('Basic ') === -1) {
             return res.status(401).json({ message: 'Missing Authorization Header' });
